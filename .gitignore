@@ -18,9 +18,10 @@ coverage/
 backend/node_modules/
 backend/dist/
 backend/build/
+!backend/src/
 
 # Frontend (ignore)
-src/
+/src/
 "Anotações do dia/"
 "Escala de horarios/"
 Relatorio/
