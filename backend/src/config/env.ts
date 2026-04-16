@@ -11,7 +11,6 @@ const candidateBackendRoots = [
   process.cwd(),
   path.resolve(process.cwd(), 'backend'),
   path.resolve(__dirname, '..', '..'),
-  path.resolve(__dirname, '..', '..', '..'),
 ];
 
 const backendRoot = candidateBackendRoots.find((candidatePath) => existsSync(path.join(candidatePath, '.env.example')) || existsSync(path.join(candidatePath, '.env')));
@@ -40,7 +39,7 @@ const envSchema = z.object({
   DATABASE_URL: z.string().default(buildTimeDatabaseUrl),
   JWT_SECRET: z.string().min(16, 'JWT_SECRET must be at least 16 characters long').default('dev-secret-change-in-production'),
   JWT_EXPIRES_IN: z.string().default('7d'),
-  CORS_ORIGIN: z.string().default('http://localhost:3000'),
+  CORS_ORIGIN: z.string().default('*'),
   DEFAULT_ADMIN_USERNAME: z.string().min(1).default('admin'),
   DEFAULT_ADMIN_PASSWORD: z.string().min(4).default('admin'),
   DEFAULT_ADMIN_NAME: z.string().min(1).default('Administrador'),
