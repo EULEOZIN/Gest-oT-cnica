@@ -22,6 +22,7 @@ backend/build/
 
 # Frontend (ignore)
 /src/
+!/src/lib/api.ts
 "Anotações do dia/"
 "Escala de horarios/"
 Relatorio/
