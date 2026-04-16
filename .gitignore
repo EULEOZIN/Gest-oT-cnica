@@ -1,0 +1,30 @@
+# Root
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+
+# Environment (except examples)
+.env
+.env.local
+.env.*.local
+
+# Vercel
+.vercel
+
+# Backend
+backend/node_modules/
+backend/dist/
+backend/build/
+
+# Frontend (ignore)
+src/
+"Anotações do dia/"
+"Escala de horarios/"
+Relatorio/
+index.html
+metadata.json
+!.env.example
+!backend/.env.example
